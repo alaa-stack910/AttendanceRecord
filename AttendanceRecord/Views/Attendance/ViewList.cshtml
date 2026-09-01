@@ -1,0 +1,30 @@
+﻿@model List<AttendanceRecord.Models.Attendance>
+
+<h2>List of Attendance</h2>
+
+@foreach (var s in Model)
+{
+    <p>
+        <strong>ID:</strong>@s.AttendanceId
+    </p>
+
+    <p>
+        <strong>Date:</strong>@s.Date
+    </p>
+    <p>
+        <strong>Status:</strong>@s.Status
+    </p>
+    <p>
+        <strong>StudentName:</strong>@s.Student.Name
+    </p>
+    <p>
+        <strong>=SubjectName:</strong>@s.Subject.Name
+    </p>
+
+
+
+
+    <br />
+    <hr />
+}
+<a href="/Attendance/Index">Back</a>

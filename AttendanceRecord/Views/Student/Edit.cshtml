@@ -1,0 +1,21 @@
+﻿@model AttendanceRecord.Models.Student
+
+<h2>Edit Student</h2>
+
+<form action="/Student/Edit" method="post">
+    <input type="hidden" name="StudentId" value="@Model.StudentId" />
+    <p>
+        <label>Name</label>
+        <input type="text" name="Name" value="@Model.Name" />
+    </p>
+
+    <p>
+        <label>Email</label>
+        <input type="text" name="Email" value="@Model.Email" />
+    </p>
+    <button type="submit">Save Changes</button>
+</form>
+
+
+<br />
+<a href="/Student/Index">Back</a>

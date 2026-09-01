@@ -1,0 +1,21 @@
+﻿@model List<AttendanceRecord.Models.Student>
+
+    <h2>Student</h2>
+    <a href="/Student/Create">Add Student</a>
+<a href="/Student/ViewList">ViewList</a>
+
+@foreach (var s in Model)
+{
+    <p>
+        <strong>ID:</strong>@s.StudentId
+    </p>
+
+    <p>
+        <strong>Name:</strong>@s.Name
+    </p>         
+    
+        <a href="/Student/Edit/@s.StudentId">Edit</a>
+    <a href="/Student/Delete/@s.StudentId">Delete</a>
+    <br />
+    <hr />
+}

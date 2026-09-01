@@ -1,0 +1,19 @@
+﻿@model List<AttendanceRecord.Models.Subject>
+
+<h2>List of Subject</h2>
+@foreach (var s in Model)
+{
+    <p>
+        <strong>ID:</strong>@s.SubjectId
+    </p>
+
+    <p>
+        <strong>Name:</strong>@s.Name
+    </p>
+
+
+    <br />
+    <hr />
+}
+
+<a href="/Subject/Index">Back</a>

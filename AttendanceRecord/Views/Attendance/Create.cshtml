@@ -1,0 +1,49 @@
+﻿@model AttendanceRecord.Models.AttendVMcs
+
+<h2>Add Attendance</h2>
+
+<form action="/Attendance/Create" method="post">
+    <p>
+        <label>Date</label>
+        <input type="datetime-local" name="Date" />
+    </p>
+
+    <p>
+        <label>StudentName</label>
+        <select asp-for="StudentId">
+            <option value="">Select-Item</option>
+            @foreach(var s in Model.Student)
+                    {
+                <option value="@s.StudentId">@s.Name</option>
+
+                    }
+                </select>
+    </p>
+
+    <p>
+        <label>SubjectName</label>
+        <select asp-for="SubjectId">
+            <option value="">Select-Item</option>
+            @foreach (var s in Model.Subject)
+            {
+                <option value="@s.SubjectId">@s.Name</option>
+
+            }
+        </select>
+    </p>
+    <p>
+        <label>Status</label>
+        <select asp-for="Status">
+            <option value="">Select-Item</option>
+            <option value="Present">Present</option>
+            <option value="Absent">Absent</option>
+
+        </select>
+    </p>
+
+    <button type="submit">Create</button>
+</form>
+
+
+<br />
+<a href="/Attendance/Index">Back</a>
